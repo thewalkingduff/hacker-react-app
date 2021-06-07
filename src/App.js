@@ -15,8 +15,10 @@ function App() {
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
+  const apiName = 'HackerNews'
+  const path = 'http://hn.algolia.com/api/v1/search_by_date?tags=story'
   const [{ data, isLoading }, doFetch] = UseDataApi(
-    'http://hn.algolia.com/api/v1/search_by_date?tags=story',
+    path,
     {
       hits: [],
     }
