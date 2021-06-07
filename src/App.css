@@ -71,7 +71,8 @@ form {
 .search-button {
     background: #D4B2B0;
     color: #353935;
-    padding: .82rem;
+    font-size: 1.25rem;
+    padding: 1rem;
     border-radius: 4px;  
     margin-left: 1rem; 
     opacity: .8; 
@@ -86,7 +87,7 @@ form {
     background: #f5f5f5;
     color: #353935;
     padding: .75rem 1rem;
-    font-size: 1rem;
+    font-size: 1.75rem;
     border-radius: 4px;
     margin-bottom: 1rem;
 }
@@ -94,6 +95,15 @@ form {
 @media screen and (max-width: 1024px) {
     form {
         padding-bottom: 1rem;
+        display: block;
+    }
+    .search-button {
+        margin-top: 1rem;
+        /* padding: 1rem 5rem; */
+        padding: .75rem 2rem;
+    }
+    .search-input {
+        font-size: 2rem;
     }
 }
 
@@ -102,7 +112,7 @@ form {
         padding: 0 1rem;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     ul {
         padding: 0 .5rem;   
@@ -111,7 +121,6 @@ form {
         font-size: 1.25rem;
     }
     form {
-        display: block;
         padding-bottom: 0rem;
     }
     .list-group-item {
@@ -121,36 +130,47 @@ form {
         padding: .65rem;
     }
     .search-button {
-        padding: .40rem;
+        padding: .75rem 2rem;
     }
     .search-input {
-        background: #f5f5f5;
-        color: #353935;
-        padding: .34rem;
-        font-size: 1rem;
-        border-radius: 4px;
+        font-size: 1.5rem;
     }
   }
 
   @media screen and (max-width: 480px) {
    
     h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     form {
         display: block;
         padding-bottom: 0rem;
     }
     .search-button {
-        padding: .28rem;
+        padding: .75rem 3rem;
         margin-top: .5rem;
     }
     .search-input {
-        background: #f5f5f5;
-        color: #353935;
-        padding: .20rem;
-        font-size: 1rem;
-        border-radius: 4px;
+        font-size: 1.35rem;   
     }
+  }
+
+    @media screen and (max-width: 320px) {
+   
+        h1 {
+            font-size: 2.75rem;
+        }
+
+        form {
+            display: block;
+            padding-bottom: 0rem;
+        }
+        .search-button {
+            padding: .5rem 3rem;
+            margin-top: .5rem;
+        }
+        .search-input {
+            font-size: 1.10rem;   
+        }
 
 }
