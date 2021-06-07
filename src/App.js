@@ -14,8 +14,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
-  const apiName = 'HackerNews'
-  const path = 'http://hn.algolia.com/api/v1/search_by_date?tags=story'
+  const path = 'https://hn.algolia.com/api/v1/search_by_date?tags=story'
   const [{ data, isLoading }, doFetch] = UseDataApi(
     path,
     {
@@ -36,7 +35,7 @@ function App() {
 
       <form
         onSubmit={event => {
-          doFetch(`http://hn.algolia.com/api/v1/search?query=${query}`);
+          doFetch(`https://hn.algolia.com/api/v1/search?query=${query}`);
           event.preventDefault();
         }}
       >
