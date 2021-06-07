@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-
 import React from 'react'
 import './App.css';
 import UseDataApi from './components/UseDataApi'
@@ -7,13 +5,11 @@ import HandlePageChange from './components/HandlePageChange';
 import Pagination from './components/Pagination';
 import Paginate from './components/Paginate'
 
-
-
 function App() {
   const { Fragment, useState } = React;
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
+  const pageSize = 20;
   const path = 'https://hn.algolia.com/api/v1/search_by_date?tags=story'
   const [{ data, isLoading }, doFetch] = UseDataApi(
     path,
@@ -39,13 +35,19 @@ function App() {
           event.preventDefault();
         }}
       >
-        <input
-          type="text"
-          value={query}
-          onChange={event => setQuery(event.target.value)}
-          className="search-input"
-        />
-        <button className="search-button" type="submit">Search</button>
+        <div className="input-div">
+          <input
+            type="text"
+            value={query}
+            onChange={event => setQuery(event.target.value)}
+            className="search-input"
+          />
+        </div>
+        <div>
+          <button className="search-button" type="submit">Search</button>
+        </div>
+
+
 
       </form>
       {
