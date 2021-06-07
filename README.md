@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 <h1 align="center">Welcome to hacker-react-app 👋</h1>
 =======
-<h1 align="center">Welcome to my-app 👋</h1>
->>>>>>> 52f239894b4a1842969244096f46ec1d8be9b86c
 <img src="public/images/hacker-news.png">
 <p>
   <a href="https://www.npmjs.com/package/my-app" target="_blank">
