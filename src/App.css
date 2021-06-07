@@ -46,7 +46,7 @@ nav {
 }
 
 .list-group {
-    padding: 1rem; 
+    padding: 1rem 1.5rem; 
     line-height: 1.5rem;  
 }
 
@@ -97,6 +97,10 @@ nav {
     margin-bottom: 1rem;
 }
 
+.pagination {
+    padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 1024px) {
     form {
         padding-bottom: 1rem;
@@ -133,11 +137,11 @@ nav {
         padding-bottom: 0rem;
     }
     .list-group {
-        padding: 0rem; 
+        padding: 1rem; 
     }
-    /* .list-group-item {
+    .list-group-item {
         border: .08rem solid #353935;
-    } */
+    }
     .page-item {
         padding: .65rem;
     }
@@ -157,6 +161,9 @@ nav {
     form {
         display: block;
         padding-bottom: 0rem;
+    }
+    .list-group {
+        padding: .3rem; 
     }
     .search-button {
         padding: .75rem 3rem;
