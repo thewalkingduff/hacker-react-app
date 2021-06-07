@@ -1,29 +1,12 @@
 // import logo from './logo.svg';
 
 import React from 'react'
-import Amplify, { API } from 'aws-amplify';
-import awsconfig from './aws-exports';
-
-Amplify.configure(awsconfig);
 import './App.css';
 import UseDataApi from './components/UseDataApi'
 import HandlePageChange from './components/HandlePageChange';
 import Pagination from './components/Pagination';
 import Paginate from './components/Paginate'
 
-
-Amplify.configure({
-  API: {
-    endpoints: [
-      {
-        name: "HackerNews",
-        endpoint: "https://omrmroj7i8.execute-api.us-east-1.amazonaws.com/dev",
-        service: "lambda",
-        region: "us-east-1"
-      }
-    ]
-  }
-})
 
 
 function App() {
