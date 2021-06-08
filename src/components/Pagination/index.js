@@ -6,7 +6,7 @@ const Pagination = ({ items, pageSize, onPageChange }) => {
     if (items.length <= 1) return null;
 
     let num = Math.ceil(items.length / pageSize);
-    let pages = Range(1, num + 2);
+    let pages = Range(1, num);
     const list = pages.map(page => {
         return (
             <Button key={page} onClick={onPageChange} className="page-item">

@@ -1,9 +1,9 @@
 // import React, { useState } from 'react'
-import React from 'react'
+import { useState, useEffect, useReducer } from 'react';
 import { DataFetchReducer } from '../../components/DataFetchReducer'
 
 export const UseDataApi = (initialUrl, initialData) => {
-    const { useState, useEffect, useReducer } = React;
+    // const { useState, useEffect, useReducer } = React;
     const [url, setUrl] = useState(initialUrl);
 
     const [state, dispatch] = useReducer(DataFetchReducer, {

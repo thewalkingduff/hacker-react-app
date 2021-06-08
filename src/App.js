@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './App.css';
 import UseDataApi from './components/UseDataApi'
 import HandlePageChange from './components/HandlePageChange';
@@ -6,10 +6,14 @@ import Pagination from './components/Pagination';
 import Paginate from './components/Paginate'
 
 function App() {
-  const { Fragment, useState } = React;
+  const { Fragment } = React;
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 20;
+  const pageSize = 10;
+  const handlePageChange = (e) => {
+    setCurrentPage(Number(e.target.textContent));
+    // console.log(e.target.textContent)
+  };
   const path = 'https://hn.algolia.com/api/v1/search_by_date?tags=story'
   const [{ data, isLoading }, doFetch] = UseDataApi(
     path,
@@ -23,7 +27,7 @@ function App() {
   console.log(page)
   if (page.length >= 1) {
     page = Paginate(page, currentPage, pageSize);
-    console.log(`currentPage: ${currentPage}`);
+    // console.log(`currentPage: ${currentPage}`);
   }
 
   return (
@@ -31,7 +35,7 @@ function App() {
 
       <form
         onSubmit={event => {
-          doFetch(`https://hn.algolia.com/api/v1/search?query=${query}`);
+          doFetch(`https://hn.algolia.com/api/v1/search_by_date?query=${query}`);
           event.preventDefault();
         }}
       >
@@ -66,7 +70,7 @@ function App() {
       <Pagination
         items={data.hits}
         pageSize={pageSize}
-        onPageChange={<HandlePageChange />}
+        onPageChange={handlePageChange}
       />
     </ Fragment>
   );
